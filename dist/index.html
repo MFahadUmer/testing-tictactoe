@@ -1,9 +1,66 @@
-<!doctype html>
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-    <title>Getting Started</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tictactoe</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+            rel="stylesheet"
+            href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+            integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z"
+            crossorigin="anonymous"
+    />
 </head>
 <body>
+<div class="container d-flex flex-column align-items-center mt-3">
+    <h1 class="mb-3 display-5 font-weight-bold">Welcome to TicTacToe!</h1>
+    <div class="d-flex flex-column align-items-center">
+        <div class="d-flex justify-content-between">
+            <div class="d-flex flex-column m-3">
+                <label for="name1" class="font-weight-bold">First Player Name</label>
+                <input id="name1" type="text" />
+            </div>
+            <div class="d-flex flex-column m-3">
+                <label for="name2" class="font-weight-bold">Second Player Name</label>
+                <input id="name2" type="text" />
+            </div>
+        </div>
+    </div>
+    <div id="winstatus" class="winstatus"></div>
+    <button id="reloadbutton" class="reloadbutton">
+        Play Again
+    </button>
+    <button id="playgame" class="playbutton " >Start Game</button>
+    <div id="playersturn" class="playersturn"></div>
+    <div id="outer-board" class="board mt-5">
+        <div id="inner-board-0" class="inner-board" data-index=0></div>
+        <div id="inner-board-1" class="inner-board" data-index=1></div>
+        <div id="inner-board-2" class="inner-board" data-index=2></div>
+        <div id="inner-board-3" class="inner-board" data-index=3></div>
+        <div id="inner-board-4" class="inner-board" data-index=4></div>
+        <div id="inner-board-5" class="inner-board" data-index=5></div>
+        <div id="inner-board-6" class="inner-board" data-index=6></div>
+        <div id="inner-board-7" class="inner-board" data-index=7></div>
+        <div id="inner-board-8" class="inner-board" data-index=8></div>
+    </div>
+</div>
+
+<script
+        src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"
+></script>
+<script
+        src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+        integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+        crossorigin="anonymous"
+></script>
+<script
+        src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+        integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+        crossorigin="anonymous"
+></script>
 <script src="main.js"></script>
 </body>
 </html>

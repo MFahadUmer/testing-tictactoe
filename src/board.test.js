@@ -1,3 +1,5 @@
+/* eslint-disable no-unused-vars, prefer-destructuring */
+/* eslint-disable no-undef, import/no-extraneous-dependencies */
 import board from './board';
 import player from './player';
 
@@ -98,3 +100,6 @@ test('returns true if game is not draw', () => {
   });
   expect(mock()).toBeTruthy();
 });
+
+/* eslint-enable no-unused-vars, prefer-destructuring */
+/* eslint-enable no-undef, import/no-extraneous-dependencies */

@@ -1,3 +1,5 @@
+/* eslint-disable no-unused-vars, prefer-destructuring */
+/* eslint-disable no-undef, import/no-extraneous-dependencies */
 import './style.css';
 import player from './player';
 import board from './board';
@@ -46,3 +48,6 @@ const playGame = () => {
   document.getElementById('outer-board').addEventListener('click', play);
 };
 playGame();
+
+/* eslint-enable no-unused-vars, prefer-destructuring */
+/* eslint-enable no-undef, import/no-extraneous-dependencies */

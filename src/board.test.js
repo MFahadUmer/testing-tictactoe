@@ -1,21 +1,21 @@
-import board from "./board";
-import player from "./player";
+import board from './board';
+import player from './player';
 
 const player1 = player('Muhammad', 'X');
 
-test("returns undefined by default", () => {
+test('returns undefined by default', () => {
   const boardArray = ['', '', '', '', '', '', '', '', ''];
-  let winCheck = true;
+  const winCheck = true;
   const mock = jest.fn((index, player) => {
     if (winCheck === true) {
       boardArray[index] = player.symbol;
     }
     return boardArray;
-  } );
+  });
   expect(mock(0, player1)).toEqual(['X', '', '', '', '', '', '', '', '']);
 });
 
-test('Return return false if user wins',()=> {
+test('Return return false if user wins', () => {
   const winArray = [
     [1, 2, 3],
     [4, 5, 6],
@@ -28,7 +28,7 @@ test('Return return false if user wins',()=> {
   ];
   const boardArray = ['X', 'O', '', '', 'X', '', 'O', '', 'X'];
   let winCheck = true;
-  const mock = jest.fn((player)=>{
+  const mock = jest.fn((player) => {
     winArray.forEach((item) => {
       let count = 0;
       item.forEach((char) => {
@@ -45,7 +45,7 @@ test('Return return false if user wins',()=> {
   expect(mock(player1)).not.toBeTruthy();
 });
 
-test('Return return true if user not wins',()=> {
+test('Return return true if user not wins', () => {
   const winArray = [
     [1, 2, 3],
     [4, 5, 6],
@@ -58,7 +58,7 @@ test('Return return true if user not wins',()=> {
   ];
   const boardArray = ['X', 'O', '', '', '', '', 'O', '', 'X'];
   let winCheck = true;
-  const mock = jest.fn((player)=>{
+  const mock = jest.fn((player) => {
     winArray.forEach((item) => {
       let count = 0;
       item.forEach((char) => {
@@ -78,11 +78,11 @@ test('Return return true if user not wins',()=> {
 test('returns false if game is draw', () => {
   let winCheck = true;
   const boardArray = ['X', 'O', 'X', 'X', 'X', 'O', 'O', 'X', 'X'];
-  const mock = jest.fn(()=>{
-      if (winCheck === true && !boardArray.includes('')) {
-        winCheck = false;
-      }
-      return winCheck;
+  const mock = jest.fn(() => {
+    if (winCheck === true && !boardArray.includes('')) {
+      winCheck = false;
+    }
+    return winCheck;
   });
   expect(mock()).not.toBeTruthy();
 });
@@ -90,7 +90,7 @@ test('returns false if game is draw', () => {
 test('returns true if game is not draw', () => {
   let winCheck = true;
   const boardArray = ['X', 'O', 'X', 'X', '', 'O', 'O', 'X', 'X'];
-  const mock = jest.fn(()=>{
+  const mock = jest.fn(() => {
     if (winCheck === true && !boardArray.includes('')) {
       winCheck = false;
     }

@@ -1,6 +1,6 @@
 import './style.css';
-import player from "./player";
-import board from "./board";
+import player from './player';
+import board from './board';
 
 const playGame = () => {
   let firstPlayerName;

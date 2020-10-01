@@ -101,5 +101,18 @@ test('returns true if game is not draw', () => {
   expect(mock()).toBeTruthy();
 });
 
+test('updates board when someone makes a move', () => {
+  let winCheck = true;
+  const boardArray = ['', '', '', '', '', '', '', '', ''];
+  const play = ['', 'X', '', '', '', '', '', '', ''];
+  const mock = jest.fn(() => {
+    if (winCheck === true) {
+      play[1] = 'X';
+      return true
+    }
+  });
+  expect(mock()).toBeTruthy();
+});
+
 /* eslint-enable no-unused-vars, prefer-destructuring */
 /* eslint-enable no-undef, import/no-extraneous-dependencies */

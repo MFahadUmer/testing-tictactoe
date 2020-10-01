@@ -110,7 +110,7 @@ test('updates board when someone makes a move', () => {
       play[1] = 'X';
       return true;
     }
-    return true
+    return true;
   });
   expect(mock()).toBeTruthy();
 });
@@ -119,7 +119,9 @@ test('displays the board', () => {
   const boardArray = ['X', 'O', 'O', 'X', 'O', 'O', 'X', 'X', 'O'];
   const index = 2;
   const items = boardArray[2];
-  document.body.innerHTML = '<div>' + `<div id=inner-board-${index} >${items}</div>` + '</div>';
+  document.body.innerHTML = '<div>'
+    + `<div id=inner-board-${index} >
+    ${items}</div>` + '</div>';
   const idd = document.getElementById('inner-board-2');
   expect(idd.innerHTML).toBe('O');
 });

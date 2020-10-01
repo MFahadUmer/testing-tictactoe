@@ -21,6 +21,12 @@
 
 In this project, the following features were done;
 
+## How to run tests
+- Clone the project from github.
+- Open the project from vscode editor.
+- Open terminal from the code editor.
+- Run npm install, this installs all the dependency packages.
+- From the command line again, run npm run test.
 
 ## Built with
 

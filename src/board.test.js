@@ -114,5 +114,18 @@ test('updates board when someone makes a move', () => {
   expect(mock()).toBeTruthy();
 });
 
+test('displays the board', () => {
+  let winCheck = true;
+  const boardArray = ['X', 'O', 'O', 'X', 'O', 'O', 'X', 'X', 'O'];
+  let index = 2
+  let items = boardArray[2]
+  document.body.innerHTML =
+    '<div>' +
+    `  <div id=inner-board-${index} >${items}</div>` +
+    '</div>';
+  const idd = document.getElementById('inner-board-2');
+  expect(idd.innerHTML).toBe('O');
+});
+
 /* eslint-enable no-unused-vars, prefer-destructuring */
 /* eslint-enable no-undef, import/no-extraneous-dependencies */

@@ -1,0 +1,60 @@
+.d-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 200px);
+  grid-gap: 20px;
+}
+
+.playbutton {
+  border: none;
+  background-color: blue;
+  padding: 10px 20px;
+  font-size: 20px;
+  color: white;
+  font-weight: bolder;
+  border-radius: 5px;
+}
+
+.board {
+  padding: 30px;
+  border-radius: 20px;
+  grid-template-columns: repeat(3, 100px);
+  grid-gap: 10px;
+  background-color: bisque;
+  display: none;
+}
+
+.board > div {
+  border-radius: 10px;
+  background-color: aqua;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 40px;
+  font-weight: bold;
+}
+
+.d-hide {
+  display: none;
+}
+
+.winstatus {
+  font-size: 40px;
+}
+
+.reloadbutton {
+  border: none;
+  background-color: blue;
+  padding: 10px 20px;
+  font-size: 20px;
+  color: white;
+  font-weight: bolder;
+  border-radius: 5px;
+  display: none;
+}
+
+.playersturn {
+  font-size: 30px;
+  color: brown;
+  font-weight: bold;
+}

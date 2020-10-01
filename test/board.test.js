@@ -1,7 +1,7 @@
 /* eslint-disable no-unused-vars, prefer-destructuring */
 /* eslint-disable no-undef, import/no-extraneous-dependencies */
-import board from './board';
-import player from './player';
+import board from '../src/board';
+import player from '../src/player';
 
 const player1 = player('Muhammad', 'X');
 
@@ -107,7 +107,7 @@ test('updates board when someone makes a move', () => {
   const play = ['', 'X', '', '', '', '', '', '', ''];
   const mock = jest.fn(() => {
     if (winCheck === true) {
-      play[1] = 'X';
+      play[1] == 'X';
       return true;
     }
     return true;
@@ -118,7 +118,7 @@ test('updates board when someone makes a move', () => {
 test('displays the board', () => {
   const boardArray = ['X', 'O', 'O', 'X', 'O', 'O', 'X', 'X', 'O'];
   const index = 2;
-  const items = boardArray[2];
+  const items = boardArray[index];
   document.body.innerHTML = `<div><div id=inner-board-${index} >${items}</div></div>`;
   const idd = document.getElementById('inner-board-2');
   expect(idd.innerHTML).toBe('O');

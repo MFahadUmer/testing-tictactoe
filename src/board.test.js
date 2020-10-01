@@ -121,7 +121,7 @@ test('displays the board', () => {
   let items = boardArray[2]
   document.body.innerHTML =
     '<div>' +
-    `  <div id=inner-board-${index} >${items}</div>` +
+    `<div id=inner-board-${index} >${items}</div>` +
     '</div>';
   const idd = document.getElementById('inner-board-2');
   expect(idd.innerHTML).toBe('O');

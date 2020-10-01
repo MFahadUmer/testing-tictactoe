@@ -102,27 +102,24 @@ test('returns true if game is not draw', () => {
 });
 
 test('updates board when someone makes a move', () => {
-  let winCheck = true;
+  const winCheck = true;
   const boardArray = ['', '', '', '', '', '', '', '', ''];
   const play = ['', 'X', '', '', '', '', '', '', ''];
   const mock = jest.fn(() => {
     if (winCheck === true) {
       play[1] = 'X';
-      return true
+      return true;
     }
+    return true
   });
   expect(mock()).toBeTruthy();
 });
 
 test('displays the board', () => {
-  let winCheck = true;
   const boardArray = ['X', 'O', 'O', 'X', 'O', 'O', 'X', 'X', 'O'];
-  let index = 2
-  let items = boardArray[2]
-  document.body.innerHTML =
-    '<div>' +
-    `<div id=inner-board-${index} >${items}</div>` +
-    '</div>';
+  const index = 2;
+  const items = boardArray[2];
+  document.body.innerHTML = '<div>' + `<div id=inner-board-${index} >${items}</div>` + '</div>';
   const idd = document.getElementById('inner-board-2');
   expect(idd.innerHTML).toBe('O');
 });
